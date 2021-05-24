@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morse Code</title>
+    <style>
+        .inputContainer1{
+            width: fit-content;
+            margin: auto;
+        }
+
+        #output{
+            margin: auto;
+            width: 50%;
+            border: 3px solid green;
+            padding: 10px;
+            text-align:center;
+            margin-top:1rem;
+
+        }
+    </style>
+    <link rel = "stylesheet" type="text/css" href="{{ url_for('static', filename = 'css/morse.css')}}">
+</head>
+<body>
+    <a href="/"><button class = "button1 btn5">back</button></a>
+    <nav id="navbar">
+        <div class="Title">Morse Code to Text</div>
+    </nav>
+    
+    
+    
+    <div class="inputContainer1">
+        <textarea id="input1" name="Input" cols="70" rows="10" placeholder="enter morse code here"></textarea>
+        </div>
+        <button id='totext' class = "button btn4">To text</button>
+        
+        <textarea id="output"></textarea>
+    
+        </div>
+        
+        <div class="tooltip">
+
+            <button onclick="myFunction()" onmouseout="outFunc()" class="button3 btn7">
+                      
+            <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                Copy text
+                </button>
+        
+            </div>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $("#totext").click(function (e){   
+    var input=$("#input1").val();
+    console.log(input);
+    $.ajax({
+        url:'/morse',
+        type:'POST',
+        data:{'input':input},
+        success: function(response){
+                $('#output').text(response.text);
+                console.log(response.text)
+        },
+        error: function(error){
+        $('#output').text(" ");
+            console.log("error aaya hai");
+        }
+    });
+    e.preventDefault()
+    })
+</script>
+
+<script>  
+function myFunction() {
+  var copyText = document.getElementById("output");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  
+  var tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "Copied: " + copyText.value;
+}
+
+function outFunc() {
+  var tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "Copy to clipboard";
+}
+
+</script>
+
+</html>

@@ -1,0 +1,220 @@
+.container{
+    margin-top: 10rem;
+    margin-left: 20rem;
+}
+
+.inputContainer{
+    width: fit-content;
+    margin: auto;
+}
+
+#output{
+    margin: auto;
+    width:44%;
+    border: 3px solid black;
+    padding: 10px;
+    text-align:center;
+    margin-top:2rem;
+    margin-left:22rem;
+
+}
+
+textarea {
+    margin: auto;
+    margin-top: 3rem;
+    border-style: solid;
+    border-color: black;
+    }
+
+button{
+    margin: auto;
+    margin-left:38rem;
+    margin-top: 2rem;
+    background: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-family: "montserrat";
+    cursor: pointer;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+
+}    
+
+.btn4{
+    color: #3498db;
+}
+.btn4:hover{
+    color: #fff;
+  }
+
+  .button::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: #3498db;
+    z-index: -1;
+    transition: 0.8s;
+  }  
+
+  .btn4::before{
+    top: 0;
+    border-radius: 0 0 50% 50%;
+  }  
+  .btn4:hover::before{
+    height: 180%;
+  }
+  .button1{
+    margin: auto;
+    margin-left:1rem;
+    background: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-family: "montserrat";
+    cursor: pointer;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+
+}    
+
+.btn5{
+    color: #3498db;
+}
+.btn5:hover{
+    color: #fff;
+  }
+
+  .button1::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: #3498db;
+    z-index: -1;
+    transition: 0.8s;
+  }  
+
+  .btn5::before{
+    top: 0;
+    border-radius: 0 0 50% 50%;
+  }  
+  .btn5:hover::before{
+    height: 180%;
+  }   
+
+
+
+
+  #nav{
+    padding:3rem 0rem;
+    background-color:#73fc73
+  }
+  @font-face{
+    font-family:steamy;
+    src: url(radios\ in\ motion.ttf);
+    
+  }
+  .Title{
+    font-weight:bold;
+    font-size:3rem;
+    text-align:center;
+    font-family:steamy;
+  }
+
+  .tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 140px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -75px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .button3{
+    background: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-family: "montserrat";
+    cursor: pointer;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+    border-radius: 27px;
+
+} 
+
+  .btn7{
+    color: #fff;  
+  }
+  .btn7:hover{
+    color: #3498db;
+  }
+
+  .button3::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: #3498db;
+    z-index: -1;
+    transition: 0.8s;
+  }
+
+  .btn7::before{
+    top: 0;
+    border-radius: 0 0 50% 50%;
+  }
+  .btn7::before{
+    height: 180%;
+  }
+  .btn7:hover::before{
+    height: 0%;
+  }
+
+  @media (max-width: 768px){
+    .btn7{
+      margin-left: 11rem;
+ 
+    }
+    #output{
+      margin-left:8rem;
+    }
+    .btn4{
+      margin-left: 12rem;
+    }
+ 
+   }

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morse Code Machine</title>
+    <link rel = "stylesheet" type="text/css" href="{{ url_for('static', filename = 'css/style.css')}}">
+</head>
+<body>
+<nav id="navbar">
+    <div class="Title">Morse Code Machine</div>
+</nav>   
+
+<div class="container">
+    <a href="/txt"><button class="btn btn1">Text to Morse Code</button></a>
+    <a href="/morse"><button class="btn btn2">Morse Code to Text</button></a>
+</div>
+<div class="container0">
+    <h1>About Morse Code</h1>
+</div>
+<div class="container1">
+    <p>Morse code is a method used in telecommunication to encode text characters as standardized 
+      sequences of two different signal durations, called dots and dashes (or dits and dahs).</p>
+    <p>Morse code is named after Samuel Morse, an inventor of the telegraph</p>
+    <p>International Morse Code, also known as Continental Morse Code, encodes the 26 Latin letters a through z,
+         one non-Latin letter, the Arabic numerals, and a small set of punctuation and procedural signals</p>
+    <p>To increase the efficiency of encoding, Morse code was designed so that the length of each symbol is approximately inverse to the frequency of 
+        occurrence of the character that it represents in text of the English language. Thus the most common letter in English, the letter e, has the shortest code: a single dit.</p> 
+    <p>International Morse Code was used in World War II and in the Korean and Vietnam wars. It was used heavily by the shipping industry and for the safety of the seas up until the early 1990s.</p>
+    <img src="./static/css/morse-chart_grande.png" alt="morse_code_chart">
+    <p>some resources on Morse Code:</p>
+    <a href="https://en.wikipedia.org/wiki/Morse_code">wikipedia</a><br>
+    <a href=https://www.britannica.com/topic/Morse-Code>britannica</a><br>
+    <a href=https://science.howstuffworks.com/innovation/inventions/morse-code.htm>Working of Morse code in digital world</a><br>
+    <a href=https://interestingengineering.com/origins-of-the-morse-code-and-how-it-works>interestingengineering</a><br>
+            
+</div>
+
+    </body>
+</html>
